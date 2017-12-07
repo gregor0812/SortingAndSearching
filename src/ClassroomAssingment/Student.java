@@ -16,7 +16,7 @@ public class Student implements Comparable<Student>
 	}
 	
 	private int studentNummer;
-	private double cijfer;
+	private int cijfer;
 	Random generator = new Random();
 	int min = 1;
 	int max = 10;
@@ -24,10 +24,10 @@ public class Student implements Comparable<Student>
 	public Student(int studentnummer)
 	{
 		studentNummer = studentnummer;
-		cijfer = (generator.nextInt((max-min)*10+1)+min*10) / 10.0;
+		cijfer = (int) ((generator.nextInt((max-min)*10+1)+min*10) / 10.0);
 	}
 	
-	public double getCijfer()
+	public int getCijfer()
 	{
 		return cijfer;
 	}
